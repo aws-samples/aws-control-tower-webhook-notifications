@@ -1,0 +1,31 @@
+{
+  "name": "ct_notifications",
+  "version": "0.1.0",
+  "bin": {
+    "ct_notifications": "bin/ct_notifications.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.39.0",
+    "@types/jest": "^25.2.2",
+    "@types/node": "14.0.1",
+    "aws-cdk": "^1.39.0",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.1",
+    "typescript": "~3.9.2"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-iam": "^1.39.0",
+    "@aws-cdk/aws-lambda": "^1.39.0",
+    "@aws-cdk/aws-sns": "^1.39.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.39.0",
+    "@aws-cdk/core": "^1.39.0",
+    "source-map-support": "^0.5.19"
+  }
+}
