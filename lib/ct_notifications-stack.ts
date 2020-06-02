@@ -47,10 +47,7 @@ export class CtNotificationsStack extends cdk.Stack {
     notificationLambda.addPermission("notificationLambdaPermission", {
       principal: new iam.ServicePrincipal('sns.amazonaws.com'),
       action: 'lambda:InvokeFunction',
-      sourceArn: cdk.Arn.format({
-        service: 'sns',
-        resource: 'aws-controltower-AggregateSecurityNotifications'
-      }, cdk.Stack.of(this))
+      sourceArn: controlTowerSnsTopic
     })
 
     const notificationSNS = sns.Topic.fromTopicArn(this,'ctSNSTopic',controlTowerSnsTopic)
